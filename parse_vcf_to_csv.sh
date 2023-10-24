@@ -22,15 +22,27 @@ if [ $# -eq 2 ];then
 	    split(dp[2], dp, ";");
 	    split(dp[1], eachdp, ",");
 	    split($5, gt, ",");
-	    if(length($4)>length($5)){split($8,type,";");tt=type[1]"[deletion]"};
-	    if(length($4)<length($5)){split($8,type,";");tt=type[1]"[insertion]"};
-	    if(length($4)==length($5)){tt="single mismatch"};
+         tt = "single mismatch";
+
+    if (length($4) > length($5)) {
+        split($8, type, ";");
+        tt = type[1] "[deletion]";
+    } else if (length($4) < length($5)) {
+        split($8, type, ";");
+        tt = type[1] "[insertion]";
+    } else if ($5 == ".") {
+        tt = ".";
+    }
+	    #if(length($4)>length($5)){split($8,type,";");tt=type[1]"[deletion]"};
+	    #if(length($4)<length($5)){split($8,type,";");tt=type[1]"[insertion]"};
+	    #if(length($4)==length($5)){tt="single mismatch"};
 	    printf $1","$2","$4","$5","tt",";
-	    printf $4":"eachdp[1]+eachdp[2]",";
+	    printf eachdp[1]+eachdp[2]",";
 	    for(y=1; y<=length(gt); y++){
 	        if(gt[y]!="<*>"){
 	            altdp=gt[y];
-	            printf altdp":"eachdp[3]+eachdp[4]",";
+                         split(altdp, alt_counts, ":");
+                         printf alt_counts[2] + eachdp[3] + eachdp[4] ",";
 	        }
 	    }
 	print eachdp[1]+eachdp[2]+eachdp[3]+eachdp[4];

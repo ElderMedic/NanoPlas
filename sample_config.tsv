@@ -1,0 +1,11 @@
+Order No.	Sample name	Barcode assigned	Plasmid size (bp)	asm_coverage
+Order1	Xrn1_P453Amber_2	RBK81	9k	30
+Order1	Xrn1_F841Amber_2	RBK82	9k	30
+Order1	Control	RBK83	3k	30
+Order2	P006	RBK84	6.5k	30
+Order2	P009	RBK85	6.5k	30
+Order2	P013	RBK86	9k	30
+Order2	P064	RBK87	11k	30
+Order2	P097	RBK88	11k	30
+Order2	P156	RBK89	6.5k	30
+Order2	BIpo2	RBK90	11k	30

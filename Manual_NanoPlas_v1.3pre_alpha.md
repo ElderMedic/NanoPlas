@@ -59,7 +59,7 @@ The pipeline follows the following workflow: all steps are optional but you need
 4. Annotation using Plannotate.
 5. Alignment using Minimap2.
 6. BAM file processing using Samtools: sort, rmdup, index.
-7. Variant calling using Bcftools.
+7. Variant calling using Bcftools. _bcftools.vcf.gz is final indexed 
 8. Variant calling using Medaka haploit variant.
 9. Structural variant calling using Sniffles2.
 10. Convert vcf files to csv format.
