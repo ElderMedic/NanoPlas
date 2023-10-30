@@ -90,7 +90,7 @@ def parse_args()->"args":
     args = parser.parse_args()
     return args
 
-# subprocess run mode: define a shell cmd runnning function in python environment
+# subprocess run mode: define a shell cmd running function in python environment
 def run_command(command, shell_use=False)->"ListOutput":
     start_time = time.time()
     start_datetime = datetime.now()
