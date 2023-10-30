@@ -1,11 +1,12 @@
 #!/usr/bin/env python
 # author: Changlin Ke, NGS BI, Macrogen Europe
-# date: 2023-06-02
+# date: 2023-10-30
+# history: 2023-06-02, v1.3 preview
 
 import os, re, sys, time
 import subprocess
 import pandas as pd
-import numpy as np
+# import numpy as np
 import argparse
 import json
 import glob
@@ -21,8 +22,8 @@ main function of pipeline
 
 work to do:
 1. add order number to sample config. copy and zip files based on order number
-3. basecalling qc notebook imported
-4. fix copying files to results folder
+2. basecalling qc notebook imported
+3. improve readability of std.out/error
 
 
 '''
