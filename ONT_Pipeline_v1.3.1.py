@@ -184,9 +184,9 @@ def run_guppy_barcoding(config)->"ListOutput":
     return process_barcoding
 
 
-def basecall_qc(sub_dir:str, fastq_file:str, config)->"ListOutput":
+def basecall_qc(sub_dir:str, fastq_file:str, pipeline_config)->"ListOutput":
     # Concatenate fastq.gz files for all runs in the same barcode subdirectory
-    files_to_merge_path = os.path.join(sub_dir, config['files_to_merge'])
+    files_to_merge_path = os.path.join(sub_dir, pipeline_config['mergefq']['files_to_merge'])
     command_mergefq = f'cat {files_to_merge_path} > {fastq_file}'
 
     command_nanoplot = [
