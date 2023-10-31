@@ -1,0 +1,41 @@
+{"guppy_basecaller": 
+    {"config": "/opt/ont/guppy/data/dna_r10.4.1_e8.2_260bps_hac.cfg", 
+        "input": "/var/lib/minknow/data/15062023/no_sample/20230615_1201_MN42632_FAW64248_5f35e939/fast5/", 
+        "output": "/media/macrogen-ont/ONT_DATA/ONT_15062023/Basecalling", 
+        "min_qscore": "8"
+        },
+         
+"mergefq":
+    {"files_to_merge":"*.fastq.gz"
+        },
+
+"guppy_barcoder": 
+    {"input": "/media/macrogen-ont/ONT_DATA/ONT_15062023/Basecalling", 
+    "output": "/media/macrogen-ont/ONT_DATA/ONT_15062023/Barcoding", 
+    "config": "/opt/ont/guppy/data/barcoding/configuration.cfg", 
+    "barcode_kits": "SQK-RBK114-96"
+    }, 
+
+"flye": {
+    "data_type": "--nano-hq", 
+    "threads": "20", 
+    "iteration": "3", 
+    "asm_coverage": true, 
+    "meta": false, 
+    "no-alt": true
+    }, 
+
+"medaka": {
+    "model": "r1041_e82_260bps_hac_g632", 
+    "threads": "16", 
+    "variant_model": "r1041_e82_260bps_hac_variant_g632"
+    }, 
+
+"plannotate": {"customdb": null}, 
+
+"bcftools": {"threads": "16"}, 
+
+"parse_vcf_csv": {"script": "/home/macrogen-ont/NanoPlas/parse_vcf_to_csv.sh"}, 
+
+"files_to_copy": ["Non_weightedHistogramReadlength.png", "consensus.fasta", "consensus*_pLann.html", "consensus*_pLann.gbk", "*_vcf.csv"]
+}
