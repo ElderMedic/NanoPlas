@@ -1,2 +1,4 @@
 # Ignore archive folder and everything in it
 **/archive/
+*/pycache/*
+
