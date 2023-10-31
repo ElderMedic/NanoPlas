@@ -86,6 +86,8 @@ The pipeline generates various output files and directories, including:
 
 The pipeline also copies selected result files to the output directory specified in the configuration.
 
+Recording of all the std.err/out/exit code of each step is dumped to pickle obj and saved in the `<working_directory>/Results/processes.pkl`. Troubleshoot your runs combined with terminal output which contains all inputs/shell cmd. 
+
 ## Contact
 
 If you have any questions or need further assistance, please contact Changlin or Jongbum.
