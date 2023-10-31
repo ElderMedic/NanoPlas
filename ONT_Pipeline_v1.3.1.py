@@ -540,7 +540,10 @@ def copy_results(base_dir, fastq_file, sub_dir, dir_name, pipeline_config)->"Lis
     # detect if all files in files_to_copy are in dest_dir, output a list of files not found
     files_not_found = [i for i in files_to_copy if not glob.glob(os.path.join(dest_dir, i))]
     if files_not_found:
-        print('Files not found: ', files_not_found, file=sys.stdout)
+        pass # TO BE OPTIMIZED
+        # can't print not found files in each iteration since the check should only be done at the end, 
+        # so here I changed the logic to only show sucess msg once all files ready.
+        # print('Files not found: ', files_not_found, file=sys.stdout)
     else:
         print('All files copied to ', dest_dir, file=sys.stdout)
 
@@ -548,7 +551,6 @@ def copy_results(base_dir, fastq_file, sub_dir, dir_name, pipeline_config)->"Lis
     process_copy = list(run_command(copy_files, shell_use=True))
     return process_copy, files_not_found, sampleid
 
-    
 
 
 '''
