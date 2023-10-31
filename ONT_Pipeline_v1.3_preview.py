@@ -27,8 +27,6 @@ work to do:
 
 
 '''
-# Work list
-
 
 # find corresponding barcode id for each input barcode name
 def get_selected_barcode(sample_config)->"pd.DataFrame":
@@ -140,6 +138,8 @@ def show_output_atError(*process):
 '''
 Running each step/tool of the pipeline
 '''
+    
+
 # Guppy basecaller and demultiplexing
 def run_guppy_basecaller(config)->"ListOutput":
     guppy_basecalling_command = [
