@@ -14,7 +14,7 @@ Location of the pipeline scripts: `/home/macrogen-ont/NanoPlas/`
 
 Replace `<working_directory>` with the path to the base directory where the output files will be generated. Optionally, you can provide the names (not path) of the configuration file (`<config_file>`) and sample configuration file (`<sample_config_file>`), but they have to present at the `<working_directory>`. By default, the pipeline looks for `pipeline_config.json` and `sample_config.tsv` in the `<working_directory>`.
 
-To fill in the best-practice configuration files, please refer to the [Standard config](./standard_config/) folder.
+To fill in the best-practice configuration files, please refer to the [Standard config](./Standard_config/) folder.
 
 ### Optional Arguments
 
