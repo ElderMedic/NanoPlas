@@ -22,7 +22,8 @@
     "iteration": "3", 
     "asm_coverage": true, 
     "meta": false, 
-    "no-alt": true
+    "no-alt": true,
+    "min-overlap":false
     }, 
 
 "medaka": {

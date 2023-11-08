@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # author: Changlin Ke, NGS BI, Macrogen Europe
-# date: 2023-06-02
+# date: 2023-11-01
 
 import os, re, sys, time
 import subprocess
@@ -219,12 +219,14 @@ def assembly(sub_dir, fastq_file, dir_name, pipeline_config:dict)->"ListOutput":
     ]
 
     # add optional parameters
-    if pipeline_config['flye']['asm_coverage']:
-        command_flye.extend(['--asm-coverage', str(sample_config[sample_config['barcode_guppy']==dir_name].loc[:,'asm_coverage'].values[0])]) # take only the first one
-    if pipeline_config['flye']['meta']:
+    if pipeline_config['flye']['asm_coverage']: # extend a list
+        command_flye.extend(['--asm-coverage', str(sample_config[sample_config['barcode_guppy']==dir_name].loc[:,'asm_coverage'].values[0])]) # take only the first val in the cell of .tsv
+    if pipeline_config['flye']['meta']: # append a str
         command_flye.append('--meta')
     if pipeline_config['flye']['no-alt']:
         command_flye.append('--no-alt-contigs')
+    if pipeline_config['flye']['min-overlap']:
+        command_flye.extend(['--min-overlap', str(sample_config[sample_config['barcode_guppy']==dir_name].loc[:,'min-overlap'].values[0])]) # take only the first val)
 
     # to add: gpu with medaka
     command_medaka = [
