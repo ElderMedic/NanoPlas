@@ -105,7 +105,7 @@ If you use this pipeline in your research, please consider citing the relevant t
 - Sniffles: [Sedlazeck et al., 2018](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-018-1611-3)
 - Samtools: [GitHub Repository](https://github.com/samtools/samtools)
 - Bcftools: [GitHub Repository](https://github.com/samtools/bcftools)
-- Plannotate: [GitHub Repository](https://github.com/sanger-pathogens/plannotate)
+- Plannotate: [GitHub Repository](https://github.com/mmcguffi/pLannotate))
 - NanoPlot: [GitHub Repository](https://github.com/wdecoster/NanoPlot)
 - Minimap2: [GitHub Repository](https://github.com/lh3/minimap2)
 - Tabix: [GitHub Repository](https://github.com/samtools/tabix)
